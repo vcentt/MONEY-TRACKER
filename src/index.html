@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+  <style>
+        body {
+        padding-top: 30px;
+        padding-left: 300px;
+        padding-right: 300px;
+        background-color: #1b1b1b;
+        color: #fff;
+        }
+
+        footer a {
+        color: black;
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+  </style>
+  
+    <title>Debit & Credit</title>
+
+</head>
+<body>
+    <h1 style="text-align: center;"><b>Money Tracker</b></h1>
+
+    <br>
+
+    <form id="form">
+        <div class="row">
+            <div class="four columns">
+                <label for="IncomeOrExpense"><b>Income or Expense</b></label>
+                <select class="u-full-width" id="moneyselect" name="IncomeOrExpense" required>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+                </select>
+            </div>
+
+            <div class="four columns">
+                <label for="Where">Category</label>
+                <input class="u-full-width" type="text" placeholder="Entertainment / Groceries / Bills ... " id="category">
+            </div>
+
+            <div class="four columns">
+                <label for="Amout"><b>Amount</b></label>
+                <input class="u-full-width" type="number" placeholder="Requiered" id="amount" style="border: 100ch;" required>
+            </div>
+
+            <div>
+                <label for="details"><b>Description</b></label>
+                <input style="height: 40px;" class="u-full-width" id="details" name="details"></input>
+            </div>
+
+            <div>
+                <label for="date"><b>Date</b></label>
+                <input style="width: auto; padding: 4px; border-radius: 10px;" type="date" id="date">
+            </div>
+        </div>
+        <br>
+        <input style="text-align: center; color: white;" type="reset" value="clear">
+        <input style="color: white;" type="submit" value="add" id="addTransccacion">
+    </form>
+
+    <table class="u-full-width">
+        <thead>
+            <tr>
+                <th>Income / Expense</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th id="total"></th>
+        </tr>
+    </table>
+
+    <script src="../dist/index.js"></script>
+</body>
+</html> 
