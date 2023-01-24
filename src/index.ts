@@ -1,11 +1,11 @@
-const incomeOrExpense = document.getElementById("#moneyselect") as HTMLSelectElement;
-const category = document.getElementById("#category") as HTMLInputElement;
-const amount = document.getElementById("#amount") as HTMLInputElement;
-const details = document.getElementById("#details") as HTMLInputElement;
-const date = document.getElementById("#date") as HTMLInputElement;
-let currentMoney = document.getElementById("#total");
+const incomeOrExpense = document.querySelector("#moneyselect") as HTMLSelectElement;
+const category = document.querySelector("#category") as HTMLInputElement;
+const amount = document.querySelector("#amount") as HTMLInputElement;
+const details = document.querySelector("#details") as HTMLInputElement;
+const date = document.querySelector("#date") as HTMLInputElement;
+let currentMoney = document.querySelector("#total");
 
-const submit = document.getElementById("#form") as HTMLFormElement;
+const submit = document.querySelector("#form") as HTMLFormElement;
 
 type TransactionModel = {
   incomeOrExpense: string,
@@ -53,7 +53,7 @@ function renderTransaction(t: TransactionModel) {
 
   t.incomeOrExpense == "Income" ? total += amount.valueAsNumber : total -= amount.valueAsNumber;
   if(currentMoney)
-  currentMoney.textContent = "Total: RD$" + total.toString()
+  currentMoney.textContent = "RD$" + total.toString()
 
   const tBody = document.querySelector("tbody");
   tBody?.appendChild(tableRow);
