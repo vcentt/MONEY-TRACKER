@@ -1,11 +1,11 @@
 "use strict";
-const incomeOrExpense = document.querySelector("#moneyselect");
-const category = document.querySelector("#category");
-const amount = document.querySelector("#amount");
-const details = document.querySelector("#details");
-const date = document.querySelector("#date");
-let currentMoney = document.querySelector("#total");
-const submit = document.querySelector("#form");
+const incomeOrExpense = document.getElementById("#moneyselect");
+const category = document.getElementById("#category");
+const amount = document.getElementById("#amount");
+const details = document.getElementById("#details");
+const date = document.getElementById("#date");
+let currentMoney = document.getElementById("#total");
+const submit = document.getElementById("#form");
 let total = 1;
 submit.addEventListener("submit", e => {
     e.preventDefault();
@@ -37,7 +37,7 @@ function renderTransaction(t) {
     tableRow.appendChild(detailsTd);
     t.incomeOrExpense == "Income" ? total += amount.valueAsNumber : total -= amount.valueAsNumber;
     if (currentMoney)
-        currentMoney.textContent = "RD$" + total.toString();
+        currentMoney.textContent = "Total: RD$" + total.toString();
     const tBody = document.querySelector("tbody");
     tBody === null || tBody === void 0 ? void 0 : tBody.appendChild(tableRow);
 }
