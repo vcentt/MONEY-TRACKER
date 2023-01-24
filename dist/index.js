@@ -37,7 +37,7 @@ function renderTransaction(t) {
     tableRow.appendChild(detailsTd);
     t.incomeOrExpense == "Income" ? total += amount.valueAsNumber : total -= amount.valueAsNumber;
     if (currentMoney)
-        currentMoney.textContent = "RD$" + total.toString();
+        currentMoney.textContent = "Current: RD$" + total.toString();
     const tBody = document.querySelector("tbody");
     tBody === null || tBody === void 0 ? void 0 : tBody.appendChild(tableRow);
 }

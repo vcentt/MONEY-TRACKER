@@ -53,7 +53,7 @@ function renderTransaction(t: TransactionModel) {
 
   t.incomeOrExpense == "Income" ? total += amount.valueAsNumber : total -= amount.valueAsNumber;
   if(currentMoney)
-  currentMoney.textContent = "RD$" + total.toString()
+  currentMoney.textContent = "Current: RD$" + total.toString()
 
   const tBody = document.querySelector("tbody");
   tBody?.appendChild(tableRow);
